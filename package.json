@@ -1,0 +1,36 @@
+{
+  "name": "iziapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tarida George, Oros Octavian, Prica Ruhama",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ".git"
+  },
+  "description": "",
+  "devDependencies": {
+    "grunt": "^0.4.1",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-cssbeautifier": "^0.1.2",
+    "grunt-exec": "^1.0.1",
+    "grunt-include-source": "^1.0.0",
+    "grunt-sass": "^1.2.1",
+    "grunt-wiredep": "^3.0.1",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "grunt": "^0.4.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "socket.io": "^1.5.1"
+  }
+}
