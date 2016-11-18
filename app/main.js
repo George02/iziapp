@@ -13,9 +13,12 @@ app.set("views", __dirname + "/views");
 app.engine('html', hbs({extname: '.html', defaultLayout: 'master', layoutsDir: __dirname + "/views"}))
 app.set('view engine', 'html');
 app.use("/assets", express.static(__dirname + "/assets"));
+app.use("/bower_components", express.static(__dirname + "/../../bower_components"));
 app.get("/", function(req, res){
 	res.render("index");
 });
 
-var port = process.env.PORT || 3000;
+app.use(authRoute);
+
+var port = process.env.PORT || 8080;
 server.listen(port, () => console.log('Server running on port ' + port));

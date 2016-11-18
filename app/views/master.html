@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Index page</title>
+	<!-- bower:js -->
+	<script src="../../../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../../../bower_components/socket.io-client/socket.io.js"></script>
+	<script src="../../../bower_components/underscore/underscore.js"></script>
+	<script src="../../../bower_components/backbone/backbone.js"></script>
+	<!-- endbower -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<!-- endbower -->
+	<link href="https://necolas.github.io/normalize.css/5.0.0/normalize.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/main.css" rel="stylesheet" type="text/css">
+	<script src="assets/js/test.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="container-fluid">
+		<div id="container" class="row">
+			<div id="menu" class="col-md-2">
+				<div class="row">
+					<div class="panel">
+						<div class="panel-heading columns-header"><p class="izi-header-title">Menu</p></div>
+						<div class="panel-body">
+							<ul class="list-group">
+								<li class="list-group-item menu-item">Acasa</li>
+								<li class="list-group-item menu-item">Chestionare</li>
+								<li class="list-group-item menu-item active">TODO List</li>
+								<li class="list-group-item menu-item">Calendar</li>
+								<li class="list-group-item menu-item">Orar</li>
+								<li class="list-group-item menu-item">Remaider</li>
+								<li class="list-group-item menu-item">Clase</li>
+							</ul>
+							<!-- <div class="panel" id="panel-active-users">
+								<div class="panel-heading">Studenti activi</div>
+								<div class="panel-body">
+									<p>Andrei, Gigel, Ion, Vasile</p>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="main" class="col-md-3">
+				<div class="row">
+					<div class="panel">
+						<!-- <div class="panel-heading columns-header"></div> -->
+						<div class="panel-body">
+							<div class="feed-element">
+								<div class="feed-element-header">
+									<small class="pull-right">2h ago</small>
+									<strong>Kim Smith</strong> a postat ceva<br>
+									<small class="text-muted">Yesterday 5:20 pm - 12.06.2014</small>
+								</div>
+								<div class="media-body">
+									<div class="well pull-left">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+										Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+									</div>
+								</div>
+							</div>
+
+							<div class="feed-element">
+								<div class="feed-element-header">
+									<small class="pull-right">2h ago</small>
+									<strong>Kim Smith</strong> a postat ceva<br>
+									<small class="text-muted">Yesterday 5:20 pm - 12.06.2014</small>
+								</div>
+								<div class="media-body">
+									<div class="well pull-left">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+										Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+									</div>
+								</div>
+							</div>
+
+							<div class="feed-element">
+								<div class="feed-element-header">
+									<small class="pull-right">2h ago</small>
+									<strong>Kim Smith</strong> a postat ceva<br>
+									<small class="text-muted">Yesterday 5:20 pm - 12.06.2014</small>
+								</div>
+								<div class="media-body">
+									<div class="well pull-left">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+										Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+									</div>
+								</div>
+							</div>
+
+							<div class="feed-element">
+								<div class="feed-element-header">
+									<small class="pull-right">2h ago</small>
+									<strong>Kim Smith</strong> a postat ceva<br>
+									<small class="text-muted">Yesterday 5:20 pm - 12.06.2014</small>
+								</div>
+								<div class="media-body">
+									<div class="well pull-left">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+										Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="view" class="col-md-7">
+				<div class="row">
+					<div class="panel">
+						<div class="panel-heading columns-header">
+							<nav class="navbar izi-navbar">
+								<div class="container-fluid">
+									<!-- Brand and toggle get grouped for better mobile display -->
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+										<a class="navbar-brand" href="#">izi</a>
+									</div>
+
+									<!-- Collect the nav links, forms, and other content for toggling -->
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										<ul class="nav navbar-nav">
+											<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+											<li><a href="#">Link</a></li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+												<ul class="dropdown-menu">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+													<li role="separator" class="divider"></li>
+													<li><a href="#">Separated link</a></li>
+													<li role="separator" class="divider"></li>
+													<li><a href="#">One more separated link</a></li>
+												</ul>
+											</li>
+										</ul>
+										<form class="navbar-form navbar-left">
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="Search">
+											</div>
+											<button type="submit" class="btn btn-default">Submit</button>
+										</form>
+										<ul class="nav navbar-nav navbar-right">
+											<li><a href="#">Link</a></li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+												<ul class="dropdown-menu">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+													<li role="separator" class="divider"></li>
+													<li><a href="#">Separated link</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div><!-- /.navbar-collapse -->
+								</div><!-- /.container-fluid -->
+							</nav>
+						</div>
+						<div class="panel-body">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
